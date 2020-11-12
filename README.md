@@ -1,4 +1,4 @@
-#Installation and Setup
+# Installation and Setup
 
 1. First you will need to have NodeJS installed on your machine. You can find the latest version [here](https://nodejs.org/en/)
 2. Click "Clone or Download" at the top of this page. Click "Download Zip" and extract the files
@@ -20,7 +20,7 @@
         `https://discordapp.com/oauth2/authorize?client_id=CLIENT_ID_GOES_HERE&scope=bot`
     9. Paste the edited link into a web browser, select the discord server you wish to add the bot to, and click "Authorize".
  
-#Running the bot
+# Running the bot
 
 Before you first launch the bot run 
 ```
@@ -42,7 +42,7 @@ Running in debug mode (nodemon)
 ```npm
 nodemon index.js
 ```
-#Configuration File config.json
+# Configuration File config.json
   1. token
     - this is the login token for your bot
   2. prefix
