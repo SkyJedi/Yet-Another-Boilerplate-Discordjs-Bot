@@ -1,0 +1,30 @@
+{
+  "name": "yet-another-boilerplate-discordjs-bot",
+  "version": "1.0.0",
+  "description": "A boilerplate bot for DiscordJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "sharded": "node start.js",
+    "debug": "nodemon index.js"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "discordJS",
+    "javascript"
+  ],
+  "author": "SkyJedi",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
