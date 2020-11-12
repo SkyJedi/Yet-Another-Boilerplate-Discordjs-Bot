@@ -1,5 +1,5 @@
 const knownCommands = require('./commands/index');
-const prefix = require('./config').prefix;
+const prefix = process.env.PREFIX;
 const version = require('./package').version;
 
 // Called every time a message comes in:

@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const prefix = require('../config').prefix;
+const prefix = process.env.PREFIX;
 
 const help = ({ message }) => {
     const embed = new Discord.MessageEmbed()

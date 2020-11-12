@@ -124,6 +124,3 @@ dist
 *.iml
 out
 gen
-
-#config file
-config.json
