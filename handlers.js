@@ -3,9 +3,14 @@ const prefix = process.env.PREFIX;
 const version = require('./package').version;
 
 // Called every time a message comes in:
-const onMessage = (message, client) => {
+const onMessage = ({ message, client }) => {
     // Ignore messages from bots
     if (message.author.bot) return;
+
+    //check for all the permissions the bot needs and return if they are not met
+    if (message.channel.type !== 'dm') {
+        if (!message.channel.permissionsFor(client.user).has('SEND_MESSAGES')) return;
+    }
 
     //Split the message into an params array, search for a prefix and if found separate the command out
     let params = message.content.toLowerCase().split(' ');
@@ -27,8 +32,8 @@ const onMessage = (message, client) => {
 
 };
 
-// Called every time kthe bot connects to Twitch chat:
-const onReady = client => {
+// Called every time the bot connects to chat:
+const onReady = ({ client }) => {
     console.info(`Logged in as ${client.user.username}!`);
     console.info(`Version: ${version}`);
 };
