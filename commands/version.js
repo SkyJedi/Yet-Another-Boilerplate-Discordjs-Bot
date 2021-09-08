@@ -1,7 +1,7 @@
-const versionNumber = require('../package').version;
+const number = require('../package').version;
 
 const version = ({ message }) => {
-	message.channel.send(`**Version:** ${versionNumber}`);
+    message.channel.send({ content: `**Version:** ${number}`});
 };
 
 module.exports = version;
